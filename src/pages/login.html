@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      input {
+        padding: 8px;
+        width: 250px;
+      }
+      button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      #message {
+        margin-top: 20px;
+        color: green;
+        font-weight: bold;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Login Page</h2>
+
+    <label for="username">Username</label><br />
+    <input id="username" type="text" placeholder="Enter Username" />
+
+    <br /><br />
+
+    <label for="password">Password</label><br />
+    <input id="password" type="password" placeholder="Enter Password" />
+
+    <br /><br />
+
+    <button id="login">Login</button>
+
+    <p id="message">Welcome, login successful!</p>
+
+    <script>
+      const loginButton = document.getElementById('login');
+      loginButton.addEventListener('click', () => {
+        document.getElementById('message').style.display = 'block';
+      });
+    </script>
+  </body>
+</html>
