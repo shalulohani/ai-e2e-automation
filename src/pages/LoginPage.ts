@@ -1,30 +1,27 @@
-import { Page, expect } from '@playwright/test';
+import { Page } from '@playwright/test';
 
 export class LoginPage {
-  readonly page: Page;
-  readonly usernameInput;
-  readonly passwordInput;
+  private readonly page: Page;
+  readonly username;
+  readonly password;
   readonly loginButton;
 
   constructor(page: Page) {
     this.page = page;
-    this.usernameInput = page.locator('#username');
-    this.passwordInput = page.locator('#password');
-    this.loginButton = page.locator('#login');
+    this.username = this.page.locator('input[placeholder="Username"]');
+    this.password = this.page.locator('input[placeholder="Password"]');
+    this.loginButton = this.page.locator('button[type="submit"]');
   }
 
-  async navigate() {
-    // Local login.html page open karega
-    await this.page.goto('file:///C:/Projects/ai-e2e-automation/src/pages/login.html');
+  async goto() {
+    await this.page.goto('http://127.0.0.1:8080/login.html');
+    await this.page.waitForLoadState('domcontentloaded');
   }
 
-  async login(username: string, password: string) {
-    await this.usernameInput.fill(username);
-    await this.passwordInput.fill(password);
+  async login(user: string, pass: string) {
+    await this.username.fill(user);
+    await this.password.fill(pass);
     await this.loginButton.click();
-  }
-
-  async verifyLoginSuccess() {
-    await expect(this.page.locator('#message')).toBeVisible();
+    await this.page.waitForLoadState('networkidle');
   }
 }

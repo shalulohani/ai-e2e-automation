@@ -1,0 +1,97 @@
+# AI-Assisted End-to-End Automation Framework  
+A modern, scalable, and intelligent end-to-end automation framework built using **Playwright**, **TypeScript**, and **Node.js**.  
+This project demonstrates clean architecture, reusable components, CI/CD integration, and AI-assisted testing workflows.
+
+---
+
+## 🚀 Features
+
+- **Playwright Test Runner** with parallel execution  
+- **TypeScript** for type safety and cleaner code  
+- **Page Object Model (POM)** architecture  
+- **Auto-waiting & smart locators**  
+- **Reusable utilities & fixtures**  
+- **Cross-browser testing** (Chromium, Firefox, WebKit)  
+- **GitHub Actions CI/CD pipeline**  
+- **HTML & Trace Viewer reports**  
+- **AI-assisted locator healing (future enhancement)**  
+
+---
+
+## 📁 Project Structure
+
+ai-e2e-automation/
+│
+├── tests/                 # Test specs
+├── src/
+│   ├── pages/             # Page Object classes
+│   ├── utils/             # Helpers & utilities
+│   ├── fixtures/          # Test data & fixtures
+│   └── config/            # Environment configs
+│
+├── playwright.config.ts   # Playwright configuration
+├── package.json           # Dependencies & scripts
+└── README.md              # Project documentation
+
+
+---
+
+## 🧪 Running Tests
+
+### Install dependencies
+```bash
+npm install
+Install Playwright browsers :
+npx playwright install
+Run all tests :npx playwright test  :
+npx playwright test
+
+
+Run tests in UI mode :
+npx playwright test --ui
+Run tests in a specific browser :
+npx playwright test --project=chromium
+Debug mode :
+
+npx playwright test --debug
+Reports
+Playwright automatically generates:
+
+HTML Report
+
+Trace Viewer
+
+Screenshots on failure
+
+Videos (optional)
+
+To open the HTML report:
+
+bash
+npx playwright show-report
+
+CI/CD – GitHub Actions
+.github/workflows/playwright.yml
+Future Enhancements
+AI-assisted locator healing
+
+API + UI hybrid tests
+
+Database validation layer
+
+Allure reporting
+
+Docker execution support
+
+Author
+Nakshatra Lohani  
+QA Automation | Playwright | TypeScript | AI-Assisted Testing
+GitHub: https://github.com/shalulohani (github.com in Bing)
+
+Support
+If you like this project, consider giving it a ⭐ on GitHub.
+It helps showcase your work to recruiters and the testing community.
+
+
+---
+
