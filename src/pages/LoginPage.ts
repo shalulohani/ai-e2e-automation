@@ -14,7 +14,8 @@ export class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('http://127.0.0.1:8080/login.html');
+   await this.page.goto('http://127.0.0.1:8080/login.html');
+
     await this.page.waitForLoadState('domcontentloaded');
   }
 
